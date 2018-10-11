@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context" xmlns:mvc="http://www.springframework.org/schema/mvc"
+    xmlns:util="http://www.springframework.org/schema/util" xmlns:jdbc="http://www.springframework.org/schema/jdbc" xmlns:tx="http://www.springframework.org/schema/tx"
+    xmlns:aop="http://www.springframework.org/schema/aop"
+    xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.1.xsd
+    http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd 
+    http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd
+    http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.2.xsd 
+    http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-3.2.xsd
+    http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.2.xsd
+    http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.2.xsd" default-autowire="byName">
+    
+    <description>demo</description>
+    <!-- 文件主要是声明一些本项目用到的bean -->
+    <context:component-scan base-package="au.edu.unsw.comp9322.CLIENT.*" />
+
+	<mvc:interceptors>
+	    <mvc:interceptor>
+	        <mvc:mapping path="/**"/>
+            <bean class="au.edu.unsw.comp9322.CLIENT.interceptor.LoginInterceptor"></bean>       
+        </mvc:interceptor>
+         <!-- <mvc:interceptor>
+            <mvc:mapping path="/**"/>
+            <bean class="au.edu.unsw.comp9322.CLIENT.interceptor.IdentityInterceptor"></bean>
+        </mvc:interceptor> -->
+    </mvc:interceptors>
+    <!--  <mvc:default-servlet-handler /> -->
+ 	<!-- <mvc:resources mapping="/css/**" location="/WEB-INF/css/"></mvc:resources> -->
+    
+	<!-- <mvc:resources location="/lib/" mapping="/lib/**" cache-period="864000"/>
+    <mvc:resources location="/vendor/**" mapping="/vendor/**"/>  
+	<mvc:resources location="/css/**" mapping="/css/**"/> 
+	<mvc:resources location="/js/**" mapping="/js/**"/>  -->
+
+  <!--  <bean name="NoticeDto" class="au.edu.unsw.comp9322.CLIENT.dto.NoticeDto"/>
+   <bean name="HttpUtil" class="au.edu.unsw.comp9322.CLIENT.util.HttpUtil"/> -->
+	
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix">
+			<value>/WEB-INF/views/</value>
+		</property>
+		<property name="suffix">
+			<value>.jsp</value>
+		</property>
+	</bean>
+	
+</beans>

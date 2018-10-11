@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<year name="2016">
+    <quarter name="1">
+        <postcode name="2000">
+            <class-and-type name="Class C">11360</class-and-type>
+            <class-and-type name="Class LR">67</class-and-type>
+            <class-and-type name="Learn">1089</class-and-type>
+            <class-and-type name="P1">246</class-and-type>
+        </postcode>
+        <postcode name="2006">
+            <class-and-type name="Class C">17</class-and-type>
+            <class-and-type name="Class LR">0</class-and-type>
+            <class-and-type name="Learn">3</class-and-type>
+            <class-and-type name="P1">2</class-and-type>
+        </postcode>
+    </quarter>
+    <quarter name="2">
+        <postcode name="2000">
+            <class-and-type name="Class C">10000</class-and-type>
+            <class-and-type name="Class LR">60</class-and-type>
+            <class-and-type name="Learn">700</class-and-type>
+            <class-and-type name="P1">100</class-and-type>
+        </postcode>
+        <postcode name="2006">
+            <class-and-type name="Class C">30</class-and-type>
+            <class-and-type name="Class LR">20</class-and-type>
+            <class-and-type name="Learn">8</class-and-type>
+            <class-and-type name="P1">0</class-and-type>
+        </postcode>
+    </quarter>
+</year>
+
+

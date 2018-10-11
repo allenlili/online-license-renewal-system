@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>网页进度条</title>
+    <style type="text/css">
+
+        html, body{
+            margin: 0;
+            padding: 0;
+        }
+        .loadbar{
+            background-color: skyblue;
+            height: 5px;
+        }
+
+    </style>
+    <script type="text/javascript" src="jquery.min.js"></script>
+</head>
+<body>
+<div class="loadbar"></div>
+
+<nav>导航栏：10%</nav> 
+<script type="text/javascript">
+    $('.loadbar').animate({'width':'10%'},100); 
+</script>
+
+<aside>左侧边栏：20%</aside>
+<script type="text/javascript">
+    $('.loadbar').animate({'width':'30%'},100); 
+</script>
+
+<article>主体：40%</article>
+<script type="text/javascript">
+    $('.loadbar').animate({'width':'70%'},100); 
+</script>
+
+<aside>右侧边栏：20%</aside>
+<script type="text/javascript">
+    $('.loadbar').animate({'width':'90%'},100); 
+</script>
+
+<footer>页脚：10%</footer>
+<script type="text/javascript">
+    $('.loadbar').animate({'width':'100%'},100); 
+</script>
+
+<script type="text/javascript">
+
+//页面资源加载完毕后清除动画
+$().ready(function(){ 
+    $('.loadbar').fadeOut();  
+});
+
+
+
+</script>
+
+</body>
+</html>

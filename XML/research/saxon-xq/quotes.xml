@@ -1,0 +1,36 @@
+<?xml-stylesheet type="text/xsl" href="../styles/books.xsl"?>
+<quotes> 
+   <listing>
+      <ITEM CAT="MMP">
+         <PRICE>20</PRICE>
+         <ISBN>0679601686</ISBN>
+      </ITEM>
+      <ITEM CAT="P">
+         <PRICE>30</PRICE>
+         <ISBN>0141439556</ISBN>
+      </ITEM>
+      <ITEM CAT="P">
+         <PRICE>30</PRICE>
+         <ISBN>0553211684</ISBN>
+      </ITEM>
+      <ITEM CAT="P">
+         <PRICE>35</PRICE>
+         <ISBN>0140435387</ISBN>
+      </ITEM>
+<!--
+      <ITEM CAT="H">
+         <PRICE>40</PRICE>
+         <ISBN>0340835672</ISBN>
+      </ITEM>
+      <ITEM CAT="P">
+         <PRICE>50</PRICE>
+         <ISBN>0142001805</ISBN>
+      </ITEM>
+-->
+   </listing>
+   <CATEGORIES DESC="Miscellaneous categories">
+      <CATEGORY CODE="P" DESC="Paperback"/>
+      <CATEGORY CODE="MMP" DESC="Mass-market Paperback"/>
+      <CATEGORY CODE="H" DESC="Hard Cover"/>
+   </CATEGORIES>
+</quotes>

@@ -1,0 +1,29 @@
+<bib>
+    <book year="1994" type="Book">
+        <title>TCP/IP Illustrated</title>
+        <author>Stevens, W.</author>
+        <publisher>Addison-Wesley</publisher>
+        <price> 65.95</price>
+    </book>
+    <book year="1992" type="Book">
+        <title>Advanced Programming in the Unix environment</title>
+        <author>Stevens, W.</author>
+        <author>Helen Paik</author>
+        <publisher>Addison-Wesley</publisher>
+        <price>65.95</price>
+    </book>
+    <book year="2000" type="Book">
+        <title>Data on the Web</title>
+        <author>Abiteboul, Serge</author>
+        <author>Buneman, Peter</author>
+        <author>Suciu, Dan</author>
+        <publisher>Morgan Kaufmann Publishers</publisher>
+        <price> 39.95</price>
+    </book>
+    <book year="1994" type="Journal">
+        <title>Economics of Technology and Content for Digital TV</title>
+        <editor>Gerbarg, Darcy</editor>
+        <publisher>Kluwer Academic Publishers</publisher>
+        <price>129.95</price>
+    </book>
+</bib>

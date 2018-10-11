@@ -1,0 +1,3 @@
+{"_id":"license","_class":"au.edu.unsw.comp9322.OLRS.model.SequenceId","seq":100.0}
+{"_id":"notice","_class":"au.edu.unsw.comp9322.OLRS.model.SequenceId","seq":NumberLong(0)}
+{"_id":"payment","_class":"au.edu.unsw.comp9322.OLRS.model.SequenceId","seq":NumberLong(0)}

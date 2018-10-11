@@ -1,0 +1,106 @@
+/* RUBBISH
+
+@Component
+@Controller
+@RequestMapping("/notice")
+public class NoticeController {
+	private static final Log logger = LogFactory.getLog(UserController.class);
+	static final String REST_URI = Constant.URL + "/notice";
+
+	@RequestMapping(value = "/initiate")
+	public ModelAndView initiateNotice() throws IOException {
+		logger.info("init");
+		System.out.println("server url :" + REST_URI);
+		WebClient client = WebClient.create(REST_URI);
+		client.header("Authorization", "officer");
+		client.header("Content-Type", "application/json");
+		client.accept(MediaType.APPLICATION_JSON);
+		Response response = client.post("");
+		System.out.println("Http entity " + response.getEntity().toString());
+		ModelAndView modelAndView = new ModelAndView("helloworld");
+		return modelAndView;
+	}
+
+	@RequestMapping(value = "/temp", consumes = MediaType.APPLICATION_JSON)
+	public ModelAndView notice_post() throws IOException {
+		logger.info("init");
+		String s = "";
+		System.out.println("Requesting server url :" + REST_URI);
+
+		// WebClient client = WebClient.create(REST_URI+"/initiate");
+		// client.header("Authorization", "officer");
+		// client.header("Content-Type", "application/json");
+		// client.accept(MediaType.APPLICATION_JSON);
+
+		// Client client = ClientBuilder.newBuilder().newClient();
+		// WebTarget target = client.target("http://localhost:8080/rs");
+		// target = target.path("service").queryParam("a", "avalue");
+		// Invocation.Builder builder = target.request();
+		// Response response = builder.post(form);
+		// NoticeDto book = builder.get(NoticeDto.class);
+
+		
+
+		final String uri = REST_URI;
+		RestTemplate restTemplate = new RestTemplate();
+
+		// create request body
+		String input = "{\n" + "    \"uuid\" : \"ed1e4530-85f1-46bb-891a-c2d2819e9d72\",\n"
+				+ "    \"status\" : \"paid\",\n" + "    \"licenseId\" : 8,\n"
+				+ "    \"tmpAddress\" : \"11 Tallowood Court, Goonellabah, NSW\",\n"
+				+ "    \"tmpEmail\" : \"youremail@email.com\",\n" + "    \"officerId\" : 0\n" + "}";
+
+		// set headers
+		HttpHeaders headers = new HttpHeaders();
+		headers.set("Content-Type", "application/json"); // setContentType(MediaType.APPLICATION_JSON);
+		headers.set("Authorization", "officer");
+		HttpEntity<String> entity = new HttpEntity<String>(input, headers);
+
+		// send request and parse result
+		ResponseEntity<String> response = restTemplate.exchange(uri, HttpMethod.POST, entity, String.class);	
+		System.out.println(response.getBody());
+		
+		JSONObject jsonObject  = new JSONObject(response.getBody()); // json
+		System.out.println("returnMsg : "+jsonObject.getString("returnMsg"));
+		
+		ModelAndView modelAndView = new ModelAndView("helloworld");
+		return modelAndView;
+	}
+	
+}
+*/
+
+//good
+//	//http://localhost:8080/api/notice/temp
+//	@RequestMapping(value = "/temp", consumes = MediaType.APPLICATION_JSON)
+//	public ModelAndView notice_post() throws IOException {
+//		logger.info("notice_post");
+//
+//		System.out.println("Requesting server url :" + REST_URI);
+//
+//		final String uri = REST_URI;
+//		RestTemplate restTemplate = new RestTemplate();
+//
+//		// create request body
+//		//return a notice, will receive first
+//		Notice notice = Notice.CreateTestNotice();
+//		//object -> json
+//		String noticeGson = new Gson().toJson(notice);
+//		
+//		// set headers
+//		HttpHeaders headers = new HttpHeaders();
+//		headers.set("Content-Type", "application/json"); // setContentType(MediaType.APPLICATION_JSON);
+//		headers.set("Authorization", "officer");
+//		HttpEntity<String> entity = new HttpEntity<String>(noticeGson, headers);
+//
+//		// send request and parse result
+//		ResponseEntity<String> response = restTemplate.exchange(uri, HttpMethod.POST, entity, String.class);	
+//		System.out.println(response.getBody());
+//			
+//		//json -> object
+//		NoticeDto noticeDto = new Gson().fromJson(response.getBody(), NoticeDto.class);
+//		System.out.println(noticeDto.toString());
+//		
+//		ModelAndView modelAndView = new ModelAndView("helloworld");
+//		return modelAndView;
+//	}

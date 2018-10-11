@@ -1,0 +1,14 @@
+<!--<?xml- version="1.0" encoding="UTF-8"?>-->
+<?xml-stylesheet type="text/xml" href="edmond.xsl"?>
+<person>
+    <name>
+        <given>David</given>
+        <family>Edmond</family>
+    </name>
+    <age>57</age>
+    <pets>
+        <dog>Winnie</dog>
+        <cat>Misty</cat>
+    </pets>
+</person>
+
