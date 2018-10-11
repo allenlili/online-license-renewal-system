@@ -25,6 +25,7 @@ System environment: JDK8+, Docker, MongoDB, MySQL
 * [SpringBoot](https://spring.io/projects/spring-boot) - The web framework used
 * [Maven](https://maven.apache.org/) - Dependency Management
 * [FreeMarker](https://rometools.github.io/rome/) - Used to generate template
+* [MyBatis](http://www.mybatis.org/mybatis-3/)
 
 ## Contributing
 
